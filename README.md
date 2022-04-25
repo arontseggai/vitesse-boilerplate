@@ -140,7 +140,7 @@ As this template is strongly opinionated, the following provides a curated list 
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
+[Create a repo from this template on GitHub](https://github.com/arontseggai/Vitesse/generate).
 
 ### Clone to local
 
