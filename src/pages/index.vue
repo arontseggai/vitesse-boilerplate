@@ -24,7 +24,7 @@ const { t } = useI18n()
       </a>
     </p>
     <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
+      <em text-sm opacity-75>Intro</em>
     </p>
 
     <div py-4 />
@@ -44,7 +44,7 @@ const { t } = useI18n()
       outline="none active:none"
       @keydown.enter="go"
     >
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
+    <label class="hidden" for="input">Label</label>
 
     <div>
       <button
@@ -52,7 +52,7 @@ const { t } = useI18n()
         :disabled="!name"
         @click="go"
       >
-        {{ t('button.go') }}
+        Go
       </button>
     </div>
   </div>

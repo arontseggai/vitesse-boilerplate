@@ -38,3 +38,19 @@ export const createApp = ViteSSG(
     })
   },
 )
+
+export async function includedRoutes(paths, routes) {
+  // https://github.com/antfu/vite-ssg#custom-routes-to-render
+
+  // Sensitive key is managed by Vite - this would not be available inside
+  // vite.config.js as it runs before the environment has been populated.
+  // const apiClient = new MyApiClient(import.meta.env.MY_API_KEY)
+
+  return Promise.all(
+    routes.flatMap((route) => {
+      return route?.children[0]?.name === 'hi-slug'
+        ? ['aron', 'miep', 'floep'].map(slug => `/hi/${slug}`)
+        : route.path
+    }),
+  )
+}
